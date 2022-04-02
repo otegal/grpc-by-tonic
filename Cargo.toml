@@ -5,11 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+name = "helloworld-server"
+path = "src/server.rs"
+
 [dependencies]
-tonic = "*"
-prost = "*"
+tonic = "0.6"
+prost = "0.9"
 tokio = { version = "*", features = ["macros", "rt-multi-thread"] }
 anyhow = "*"
 
 [build-dependencies]
-tonic-build = "*"
+tonic-build = "0.6"
